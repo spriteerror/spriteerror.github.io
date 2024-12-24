@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Love Tracker</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f8ff;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            color: #ff69b4;
-        }
-        .tracker {
-            margin-top: 20px;
-            font-size: 1.5rem;
-            color: #333;
-        }
-        .highlight {
-            color: #ff69b4;
-            font-weight: bold;
-        }
+       <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('background.jpg');
+        background-size: cover; /* Make the background cover the entire page */
+        background-position: center; /* Center the background image */
+        background-attachment: fixed; /* Make the background stay fixed while scrolling */
+        color: white; /* Ensure text is readable on the background */
+    }
+    h1, p, .tracker {
+        background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to text */
+        padding: 10px;
+        border-radius: 10px;
+        display: inline-block;
+    }
+</style>
+
     </style>
 </head>
 <body>
@@ -55,6 +55,8 @@
 
         updateTime();
         setInterval(updateTime, 1000); // Update every second
+		<h2>Our Memories</h2>
+ 
     </script>
 </body>
 </html>
