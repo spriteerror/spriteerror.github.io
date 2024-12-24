@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        .tracker {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .highlight {
+            color: #ff69b4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wawa & Sayang Love Tracker 💖</h1>
+    <p class="tracker">
+        We've been together for:
+        <br>
+        <span id="years" class="highlight"></span> years,
+        <span id="months" class="highlight"></span> months,
+        <span id="days" class="highlight"></span> days,
+        <span id="hours" class="highlight"></span> hours.
+    </p>
+    <script>
+        function updateTime() {
+            const startDate = new Date("2024-11-26T00:00:00");
+            const now = new Date();
+            const diff = now - startDate;
+
+            const years = Math.floor(diff / (365.25 * 24 * 60 * 60 * 1000));
+            const months = Math.floor(diff / (30.44 * 24 * 60 * 60 * 1000)) % 12;
+            const days = Math.floor(diff / (24 * 60 * 60 * 1000)) % 30;
+            const hours = Math.floor(diff / (60 * 60 * 1000)) % 24;
+
+            document.getElementById("years").textContent = years;
+            document.getElementById("months").textContent = months;
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000); // Update every second
+    </script>
+</body>
+</html>
