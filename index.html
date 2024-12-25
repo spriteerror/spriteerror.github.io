@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,11 +37,18 @@
         <span id="hours" class="highlight"></span> hours.
     </p>
 
+    <h2>Our Song</h2>
+   <audio autoplay loop hidden>
+    <source src="love-song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+
     <h2>Our Memories</h2>
 
     <script>
         function updateTime() {
-            const startDate = new Date("2024-11-26T00:00:00");
+            const startDate = new Date("2019-10-26T00:00:00");
             const now = new Date();
             const diff = now - startDate;
 
@@ -59,11 +66,5 @@
         updateTime();
         setInterval(updateTime, 1000); // Update every second
     </script>
-	<h2>Our Song</h2>
-<audio controls autoplay loop>
-    <source src="love-song.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-
 </body>
 </html>
